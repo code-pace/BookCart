@@ -2,6 +2,8 @@
 
 <suite name="Suite1" verbose="1" parallel="tests" thread-count="1">
     <parameter name="browser" value="chrome"/>
+    <parameter name="executeMode" value="local"/>
+
     <test name="Home Page Test" preserve-order="true">
         <classes>
             <class name="pageTest.HomePageTest" >
@@ -18,31 +20,47 @@
             </class>
         </classes>
     </test>
-<!--    <test name="User Registration Test" preserve-order="true">-->
-<!--        <classes>-->
-<!--            <class name="pageTest.UserRegistrationPageTest" >-->
-<!--                <methods>-->
-<!--                    <include name = "loginViewTest"/>-->
-<!--                    <include name = "createUserNoPasswordTest"/>-->
-<!--                    <include name = "createUserNoUsernameTest"/>-->
-<!--                    <include name = "createUserNoFirstnameTest"/>-->
-<!--                    <include name = "createUserNoLastnameTest"/>-->
-<!--                    <include name = "createUserNoGenderTest"/>-->
-<!--                    <include name = "createUserTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Login Test" preserve-order="true">-->
-<!--        <classes>-->
-<!--            <class name="pageTest.LoginPageTest" >-->
-<!--                <methods>-->
-<!--                    <include name = "loginNoPasswordTest"/>-->
-<!--                    <include name = "loginInvalidUsernameTest"/>-->
-<!--                    <include name = "loginInvalidPasswordTest"/>-->
-<!--                    <include name = "loginValidCredentialsTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="User Registration Test" preserve-order="true">
+        <classes>
+            <class name="pageTest.UserRegistrationPageTest" >
+                <methods>
+                    <include name = "loginViewTest"/>
+                    <include name = "createUserNoPasswordTest"/>
+                    <include name = "createUserNoUsernameTest"/>
+                    <include name = "createUserNoFirstnameTest"/>
+                    <include name = "createUserNoLastnameTest"/>
+                    <include name = "createUserNoGenderTest"/>
+                    <include name = "createUserTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login Test" preserve-order="true">
+        <classes>
+            <class name="pageTest.LoginPageTest" >
+                <methods>
+                    <include name = "loginNoPasswordTest"/>
+                    <include name = "loginInvalidUsernameTest"/>
+                    <include name = "loginInvalidPasswordTest"/>
+                    <include name = "loginValidCredentialsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Cart Test" preserve-order="true">
+        <classes>
+            <class name="pageTest.CartPageTest" >
+                <methods>
+                    <include name = "addItemToCartFromAllCategoryTest"/>
+                    <include name = "addItemToCartFromBiographyTest"/>
+                    <include name = "addItemToCartFromFictionTest"/>
+                    <include name = "addItemToCartFromMystery"/>
+                    <include name = "addItemToCartFromFantasy"/>
+                    <include name = "addItemToCartFromRomanceTest"/>
+                    <include name = "removeItemFromCartTest"/>
+                    <include name = "increaseAndDecreaseItemInCartTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

@@ -31,8 +31,6 @@ public class HomePageTest extends Base {
             item.put("price", price);
             books.add(item);
         }
-
-        System.out.println("books: "+books);
         for (int x = 0; books.size() > x; x++) {
             if (!bookName.contains(books.get(x))) {
                 flag.set(false);
@@ -54,7 +52,6 @@ public class HomePageTest extends Base {
             item.put("price", price);
             bookName.add(item);
         }
-        System.out.println("AllCategoryBooks: "+bookName);
         Assert.assertTrue(bookName.size() > 1);
     }
     @Test
